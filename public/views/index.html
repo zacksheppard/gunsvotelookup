@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Guns votes</title>
+
+    <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css"> <!-- custom styles -->
+
+    <script src="libs/angular/angular.js"></script>
+    <script src="libs/angular-route/angular-route.min.js"></script>
+
+    <script src="js/controllers/districtController.js"></script>
+    <script src="js/controllers/homeController.js"></script>
+    <script src="js/appRoutes.js"></script>
+    <script src="js/app.js"></script>
+  </head>
+  <body ng-app="gunVotesApp" >
+    <div class="container">
+      
+      <h1>Gun Votes</h1>
+      <div ng-view></div>
+
+    </div>
+  </body>
+</html>
