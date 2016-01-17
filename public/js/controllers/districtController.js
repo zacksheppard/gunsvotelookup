@@ -4,6 +4,7 @@ angular.module('districtCtrl', [])
 
     $scope.district = $routeParams.district;
     $scope.state = $routeParams.state;
+    $scope.tagline = "Hi, I'm the district tagline!";
 
   });
   
