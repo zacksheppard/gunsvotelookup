@@ -9,7 +9,7 @@ var port = process.env.PORT || 8080;
 // Uncomment after credentials entered in config/db.js)
 // mongoose.connect(db.url); 
 
-// Set static files location. Ex. Makes '/img' available at /img 
+// Set static files location. Ex. Makes /public/img' available at /img 
 app.use(express.static(__dirname + '/public'));
 
 require('./app/routes')(app);
