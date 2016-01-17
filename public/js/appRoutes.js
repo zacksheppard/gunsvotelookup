@@ -7,7 +7,7 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider',
         controller: 'homeController' 
       })
 
-      .when('/district', {
+      .when('/district/:state/:district', {
         templateUrl: 'views/district.html',
         controller: 'districtController' 
       });
