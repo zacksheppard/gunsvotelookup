@@ -1,5 +1,14 @@
+<p>{{tagline}}</p>
+
 <p>For <strong>{{state}}</strong> district <strong>{{district}}</strong>, the congressman are,</p>
 
-<p>...coming soon</p>
-
-<p>{{tagline}}</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-3" ng-repeat="rep in representatives">
+      <h3>{{rep.full_name}}</h3>
+      <p>State: {{rep.state}}</p>
+      <p>Office: {{rep.congress_office}}</p>
+      <p>NRA Grade: {{rep.nra_grade}}</p>
+    </div>
+  </div>
+</div>
