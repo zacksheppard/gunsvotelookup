@@ -2,11 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Guns votes</title>
+    <title>Gun votes</title>
 
-    <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css"> <!-- custom styles -->
+    <link rel="stylesheet" href="css/app.css"> <!-- custom styles -->
 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <script src="libs/angular/angular.js"></script>
     <script src="libs/angular-route/angular-route.min.js"></script>
 
@@ -15,12 +15,12 @@
     <script src="js/appRoutes.js"></script>
     <script src="js/app.js"></script>
   </head>
-  <body ng-app="gunVotesApp" >
+  <body ng-app="gunVotesApp">
     <div class="container">
-      
-      <h1>Gun Votes</h1>
-      <div ng-view></div>
-
+      <div id="home">
+        <h1>Find Congress' Gun Position.</h1>
+        <div ng-view></div>
+      </div>
     </div>
   </body>
 </html>
