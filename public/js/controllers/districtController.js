@@ -1,6 +1,6 @@
-angular.module('districtCtrl', [])
-
-  .controller('districtController', function($scope, $routeParams){
+angular.module('gunVotesApp')
+  .controller('DistrictController', 
+    ['$scope', '$routeParams', function($scope, $routeParams){
 
     $scope.district = $routeParams.district;
     $scope.state = $routeParams.state;
@@ -95,5 +95,5 @@ angular.module('districtCtrl', [])
         "website": "http:\/\/aderholt.house.gov"
       }
     ];
-  });
+  }]);
   
