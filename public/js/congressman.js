@@ -1,4 +1,3 @@
-var congress = 
 {
   "AL": {
     "name": "Alabama",
@@ -4483,7 +4482,7 @@ var congress =
         "firstname": "n",
         "state": "HI",
         "congress_office": "U.S. Senate",
-        "full_name": "Vacant",
+        "full_name": "Vacant"
       },
       {
         "nra_grade": "F",
@@ -16127,4 +16126,4 @@ var congress =
       }
     ]
   }
-};
+}

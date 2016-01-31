@@ -1,5 +1,6 @@
 angular.module('gunVotesApp', 
-  ['ngRoute'
+  [ 'ngRoute',
+    'ngResource'
   ])
   .config(['$routeProvider', '$locationProvider',
   function($routeProvider, $locationProvider) {
@@ -14,6 +15,11 @@ angular.module('gunVotesApp',
         templateUrl: 'views/district.html',
         controller: 'DistrictController' 
       });
+
+      // .when('/district/:state/:district', {
+      //   templateUrl: 'views/district.html',
+      //   controller: 'DistrictController' 
+      // });
 
     // $locationProvider.html5Mode(true);
   }]);

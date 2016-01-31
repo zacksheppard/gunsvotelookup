@@ -1,13 +1,14 @@
 angular.module('gunVotesApp')
   .controller('DistrictController', districtController);
 
-    districtController.$inject = ['$scope', '$routeParams']
+    districtController.$inject = ['$scope', '$routeParams', 'districtService']
     
-    function districtController($scope, $routeParams){
+    function districtController($scope, $routeParams, districtService){
 
       $scope.district = $routeParams.district;
       $scope.state = $routeParams.state;
       $scope.tagline = "Hi, I'm the district tagline!";
+      $scope.serviceTest = districtService.serviceTest();
 
       // Static data to use for prototyping front end
       $scope.representatives = [
