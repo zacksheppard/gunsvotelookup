@@ -1,5 +1,9 @@
 angular.module('gunVotesApp')
-  .controller('HomeController', function($scope){
+  .controller('HomeController', homeController);
+
+  homeController.$inject = ['$scope'];
+
+  function homeController($scope){
     $scope.tagline = "Home page tagline!";
-  });
+  };
   
