@@ -16,10 +16,5 @@ angular.module('gunVotesApp',
         controller: 'DistrictController' 
       });
 
-      // .when('/district/:state/:district', {
-      //   templateUrl: 'views/district.html',
-      //   controller: 'DistrictController' 
-      // });
-
     // $locationProvider.html5Mode(true);
   }]);

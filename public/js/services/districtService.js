@@ -5,13 +5,32 @@ angular.module('gunVotesApp')
 
   function districtService($http){
 
-    var congress = $http.get('/js/congressman.js')
-      .then(function(response){
-        console.log(response);
-        return response.data;
-      });
+    // var getCongressData;
+    var service = {
+      // getDistrictReps: getDistrictReps,
+      getCongressData: getCongressData
+    };
 
-    this.serviceTest = function() {
-      return 'Some Asshole';
+
+    function getCongressData() {
+      var promise = $http.get('/js/congressman.js')
+        .then(function(response){
+          // console.log(response);
+          return response.data;
+        }
+      );
+      return promise;
     }
+
+    // function getDistrictReps(state, district) {
+    //   var representatives = [];
+    //   var congressData;
+    //   this.getCongressData().then(function(data) {
+    //     // console.log(data[state]);
+    //     return data[state];
+    //   });
+    // };
+
+    return service;
+
   };
