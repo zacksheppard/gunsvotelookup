@@ -17,4 +17,5 @@ angular.module('gunVotesApp',
       });
 
     // $locationProvider.html5Mode(true);
-  }]);
+  }]
+);
