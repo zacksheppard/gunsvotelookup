@@ -9,14 +9,9 @@ function districtController($scope, $routeParams, districtService){
   var district = parseInt($routeParams.district);
   var state = $routeParams.state;
 
-  // $scope.district = district;
-  // $scope.state = state;
-  $scope.tagline = "Hi, I'm the district tagline!";
-
   districtService.getCongressData().then(function(data){
 
     for(i=0; data[state].senators.length > i; i++) {
-      console.log(data[state].senators[i]);
       representatives.push(data[state].senators[i]);
     }
 
@@ -25,7 +20,10 @@ function districtController($scope, $routeParams, districtService){
         representatives.push(data[state].representatives[i]);
       }
     }
+
     $scope.representatives = representatives;
+    $scope.state = state;
+    $scope.district = district;
   });
 
 };
