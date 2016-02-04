@@ -2,6 +2,9 @@
   "name": "gunsvotelookup.com",
   "main": "server.js",
   "dependencies": {
+    "angular": "^1.4.9",
+    "angular-resource": "^1.4.9",
+    "angular-route": "^1.4.9",
     "bootstrap-sass": "^3.3.6",
     "express": "^4.13.3",
     "mongoose": "^4.3.6"
