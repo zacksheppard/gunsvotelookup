@@ -1,0 +1,19 @@
+{
+  "name": "gunsvotelookup",
+  "version": "1.0.0",
+  "description": "A clientside-only version of the gunsvotelookup app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zacksheppard/gunsvotelookup.git"
+  },
+  "author": "eric@standardpixel.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zacksheppard/gunsvotelookup/issues"
+  },
+  "homepage": "https://github.com/zacksheppard/gunsvotelookup#readme"
+}
