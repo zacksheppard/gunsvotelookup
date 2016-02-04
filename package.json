@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/zacksheppard/gunsvotelookup/issues"
   },
-  "homepage": "https://github.com/zacksheppard/gunsvotelookup#readme"
+  "homepage": "https://github.com/zacksheppard/gunsvotelookup#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-compile-handlebars": "^0.6.1",
+    "gulp-rename": "^1.2.2"
+  }
 }
