@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var handlebars = require('gulp-compile-handlebars');
 var rename = require('gulp-rename');
 var webpack = require('gulp-webpack');
+var webserver = require('gulp-webserver');
 
 var paths = {
   'handlebars': 'handlebars/*.hbs'
@@ -34,10 +35,19 @@ gulp.task('webpack', function() {
     .pipe(gulp.dest('dist/assets/'));
 });
 
+gulp.task('webserver', function() {
+  gulp.src(__dirname + '/dist/')
+    .pipe(webserver({
+      livereload: true,
+      directoryListing: true,
+      open: 'index.html',
+    }));
+});
+
 // Rerun the task when a file changes
 gulp.task('watch', function() {
-  return gulp.watch(paths.templates, ['handlebars']);
+  return gulp.watch(paths.handlebars, ['handlebars']);
 });
 
 // The default task (called when you run `gulp` from cli)
-gulp.task('default', ['watch', 'handlebars', 'webpack']);
+gulp.task('default', ['watch', 'handlebars', 'webpack', 'webserver']);
