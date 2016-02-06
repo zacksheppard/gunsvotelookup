@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'normalize.css/normalize.css';
 import '../sass/app.scss';
 
 class App extends React.Component {

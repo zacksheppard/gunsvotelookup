@@ -30,7 +30,7 @@ gulp.task('webpack', function() {
             loader: 'babel?presets[]=react,presets[]=es2015'
           },
           {
-            test: /\.scss$/,
+            test: [/\.scss$/, /\.css$/],
             loaders: ["style", "css", "sass"]
           }
         ]
