@@ -28,8 +28,15 @@ gulp.task('webpack', function() {
             test: /\.jsx?$/,
             exclude: /(node_modules|bower_components)/,
             loader: 'babel?presets[]=react,presets[]=es2015'
+          },
+          {
+            test: /\.scss$/,
+            loaders: ["style", "css", "sass"]
           }
         ]
+      },
+      sassLoader: {
+        includePaths: [__dirname + './scss']
       }
     }))
     .pipe(gulp.dest('dist/assets/'));
@@ -38,7 +45,7 @@ gulp.task('webpack', function() {
 gulp.task('webserver', function() {
   gulp.src(__dirname + '/dist/')
     .pipe(webserver({
-      livereload: true,
+      livereload: false,
       directoryListing: true,
       open: 'index.html',
     }));
