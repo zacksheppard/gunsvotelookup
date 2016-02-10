@@ -1,0 +1,14 @@
+.zip-lookup-form {
+  color: white;
+
+  &__input {
+
+    &:invalid {
+      background-color: red;
+    }
+
+    &:valid {
+      background-color: green;
+    }
+  }
+}

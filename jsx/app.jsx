@@ -7,7 +7,8 @@ import 'normalize.css/normalize.css';
 import '../sass/app.scss';
 
 import {HomePage} from './home-page.jsx';
-import {DetailPage} from './detail-page.jsx';
+import {StatePage} from './state-page.jsx';
+import {DistrictPage} from './district-page.jsx';
 
 // Opt-out of persistent state, not recommended.
 const history = createHistory({
@@ -16,17 +17,10 @@ const history = createHistory({
 
 class App extends React.Component {
   render() {
-    let view = null;
-    let zip = parseInt(this.props.params.zipCode);
 
-    if (!zip || zip.toString().length !== 5 || typeof zip !== 'number') {
-      view = (<HomePage />);
-    } else {
-      view = (<DetailPage zipCode={this.props.params.zipCode} />);
-    }
     return (
       <div>
-        {view}
+        {this.props.children}
       </div>
     )
   }
@@ -36,7 +30,8 @@ ReactDOM.render((
   <Router history={history}>
     <Route path="/" component={App}>
       <IndexRoute component={HomePage}/>
-      <Route path=":zipCode(94110)" component={DetailPage}/>
+      <Route path=":state" component={StatePage}/>
+      <Route path=":state/:district" component={DistrictPage} />
     </Route>
   </Router>
 ), document.querySelector("#app"));

@@ -3,9 +3,12 @@ var handlebars = require('gulp-compile-handlebars');
 var rename = require('gulp-rename');
 var webpack = require('gulp-webpack');
 var webserver = require('gulp-webserver');
+var copy = require('gulp-copy');
 
 var paths = {
-  'handlebars': 'handlebars/*.hbs'
+  'handlebars': 'handlebars/*.hbs',
+  'assetsSource': 'assets/**/**',
+  'assetsDestination': 'dist/assets/'
 };
 
 gulp.task('handlebars', function(){
@@ -13,6 +16,13 @@ gulp.task('handlebars', function(){
 		.pipe(handlebars())
     .pipe(rename({extname: '.html'}))
 		.pipe(gulp.dest('dist/'));
+});
+
+gulp.task('copy', function(){
+  return gulp.src(paths.assetsSource)
+    .pipe(copy(paths.assetsDestination, {
+      'prefix': 1
+    }));
 });
 
 gulp.task('webpack', function() {
@@ -57,4 +67,4 @@ gulp.task('watch', function() {
 });
 
 // The default task (called when you run `gulp` from cli)
-gulp.task('default', ['watch', 'handlebars', 'webpack', 'webserver']);
+gulp.task('default', ['watch', 'handlebars', 'copy', 'webpack', 'webserver']);
