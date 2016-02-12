@@ -15,21 +15,61 @@ export class DistrictPage extends React.Component {
     this.getData();
   }
 
+  getDistrict(state, district) {
+
+    let congress = this.state.congress;
+    let stateData;
+    let districts = {};
+
+    if (congress && congress[state]) {
+
+      stateData = congress[state];
+
+      if (stateData.representatives) {
+        stateData.representatives.forEach((rep) => {
+          districts[rep.district] = rep;
+        });
+      }
+
+      if (stateData.senators) {
+        stateData.senators.forEach((sen) => {
+          districts[sen.district] = sen;
+        });
+      }
+
+      return {
+        name: stateData.name,
+        districts: districts
+      }
+    }
+
+  }
+
   getData() {
     let that = this;
+    let data;
 
     xhr({
       uri: `assets/congressperson.json`,
       method: 'GET'
     }, (err, resp, body) => {
-      this.setState({
-        'data': JSON.parse(body)
-      });
+
+      try {
+        data = JSON.parse(body);
+      } catch (error) {
+      }
+
+      if (data) {
+        this.setState({
+          'congress': data
+        });
+      }
     })
   }
 
   render() {
-    if(this.state.data) {
+    console.log(this.getDistrict(this.props.params.state, this.props.params.district));
+    if(this.state.congress) {
       return <h1>Hi District</h1>
     } else {
       return (
