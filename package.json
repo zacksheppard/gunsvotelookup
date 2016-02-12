@@ -23,6 +23,7 @@
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-react": "^6.3.13",
     "css-loader": "^0.23.1",
+    "git-directory-deploy": "^1.4.0",
     "gulp": "^3.9.0",
     "gulp-compile-handlebars": "^0.6.1",
     "gulp-copy": "0.0.2",
