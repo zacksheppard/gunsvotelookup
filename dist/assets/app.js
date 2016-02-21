@@ -25366,6 +25366,7 @@
 	      var congress = this.state.congress;
 	      var stateData = undefined;
 	      var districts = {};
+	      var senators = [];
 
 	      if (congress && congress[state]) {
 
@@ -25379,13 +25380,14 @@
 
 	        if (stateData.senators) {
 	          stateData.senators.forEach(function (sen) {
-	            districts[sen.district] = sen;
+	            senators.push(sen);
 	          });
 	        }
 
 	        return {
 	          name: stateData.name,
-	          districts: districts
+	          districts: districts,
+	          senators: senators
 	        };
 	      }
 	    }

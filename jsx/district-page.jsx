@@ -20,6 +20,7 @@ export class DistrictPage extends React.Component {
     let congress = this.state.congress;
     let stateData;
     let districts = {};
+    let senators = [];
 
     if (congress && congress[state]) {
 
@@ -33,13 +34,14 @@ export class DistrictPage extends React.Component {
 
       if (stateData.senators) {
         stateData.senators.forEach((sen) => {
-          districts[sen.district] = sen;
+          senators.push(sen);
         });
       }
 
       return {
         name: stateData.name,
-        districts: districts
+        districts: districts,
+        senators: senators
       }
     }
 
