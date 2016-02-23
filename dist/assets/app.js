@@ -24565,7 +24565,7 @@
 
 
 	// module
-	exports.push([module.id, "#gunvotes2016 {\n  font-family: 'Open Sans', sans-serif;\n  background-color: #a11931;\n  font-family: Open Sans;\n  font-size: 12px;\n  color: #fff;\n  background: #207bca;\n  background: linear-gradient(45deg, #207bca 0%, #c03a2e 100%);\n  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#207bca', endColorstr='#c03a2e', GradientType=1 );\n  min-height: 100vh; }\n", ""]);
+	exports.push([module.id, "#gunvotes2016 {\n  font-family: 'Open Sans', sans-serif;\n  font-weight: 300; }\n\n#gunvotes2016 {\n  background: #207bca;\n  background: linear-gradient(45deg, #207bca 0%, #c03a2e 100%);\n  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#207bca', endColorstr='#c03a2e', GradientType=1 ); }\n\n#gunvotes2016 {\n  display: flex;\n  align-items: center;\n  justify-content: center; }\n\n#gunvotes2016 {\n  font-size: 12px;\n  color: #fff;\n  min-height: 100vh;\n  text-align: center;\n  box-sizing: border-box; }\n  #gunvotes2016 * {\n    box-sizing: border-box; }\n", ""]);
 
 	// exports
 
@@ -24576,12 +24576,12 @@
 
 	'use strict';
 
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
 	exports.HomePage = undefined;
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _react = __webpack_require__(1);
 
@@ -24625,10 +24625,10 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
-	        null,
+	        { className: 'home-page' },
 	        _react2.default.createElement(
 	          'h1',
-	          null,
+	          { className: 'home-page__heading' },
 	          'Find congress\'s gun position'
 	        ),
 	        _react2.default.createElement(_zipLookupForm.ZipLookupForm, { onData: this.onData.bind(this) })
@@ -24674,7 +24674,7 @@
 
 
 	// module
-	exports.push([module.id, "", ""]);
+	exports.push([module.id, ".home-page .zip-lookup-form__input {\n  border-radius: 5px;\n  padding: 17px;\n  border: 0;\n  color: #333;\n  font-weight: bold;\n  box-shadow: inset 0px 3px 8px rgba(0, 0, 0, 0.3); }\n\n.home-page__heading {\n  font-family: 'Open Sans', sans-serif;\n  font-weight: 300; }\n\n.home-page__heading {\n  font-size: 36px; }\n\n.home-page__heading {\n  margin-bottom: 50px; }\n\n.home-page .zip-lookup-form__input {\n  width: 300px; }\n", ""]);
 
 	// exports
 
@@ -24685,12 +24685,12 @@
 
 	'use strict';
 
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
 	exports.ZipLookupForm = undefined;
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _react = __webpack_require__(1);
 
@@ -24788,7 +24788,7 @@
 
 
 	// module
-	exports.push([module.id, ".zip-lookup-form {\n  color: white; }\n  .zip-lookup-form__input:invalid {\n    background-color: red; }\n  .zip-lookup-form__input:valid {\n    background-color: green; }\n", ""]);
+	exports.push([module.id, ".zip-lookup-form {\n  color: white; }\n", ""]);
 
 	// exports
 
@@ -25219,12 +25219,12 @@
 
 	'use strict';
 
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
 	exports.StatePage = undefined;
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _react = __webpack_require__(1);
 
@@ -25313,12 +25313,12 @@
 
 	'use strict';
 
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
 	exports.DistrictPage = undefined;
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _react = __webpack_require__(1);
 

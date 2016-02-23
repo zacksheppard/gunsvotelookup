@@ -15,8 +15,8 @@ export class HomePage extends React.Component {
 
   render() {
     return (
-      <div>
-        <h1>Find congress&#39;s gun position</h1>
+      <div className="home-page">
+        <h1 className="home-page__heading">Find congress&#39;s gun position</h1>
         <ZipLookupForm onData={this.onData.bind(this)} />
       </div>
     )

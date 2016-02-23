@@ -1,2 +1,18 @@
+@import "common";
+
 .home-page {
+
+  &__heading {
+    @extend %font-face;
+    @extend %heading-1;
+
+    margin-bottom: 50px;
+  }
+
+  .zip-lookup-form__input {
+    @extend %text-box;
+
+    width: 300px;
+  }
+
 }
