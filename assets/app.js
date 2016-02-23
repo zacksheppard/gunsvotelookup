@@ -24565,7 +24565,7 @@
 
 
 	// module
-	exports.push([module.id, "#gunvotes2016 {\n  font-family: 'Open Sans', sans-serif;\n  font-weight: 300; }\n\n#gunvotes2016 {\n  background: #207bca;\n  background: linear-gradient(45deg, #207bca 0%, #c03a2e 100%);\n  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#207bca', endColorstr='#c03a2e', GradientType=1 ); }\n\n#gunvotes2016 {\n  display: flex;\n  align-items: center;\n  justify-content: center; }\n\n#gunvotes2016 {\n  font-size: 12px;\n  color: #fff;\n  min-height: 100vh;\n  text-align: center;\n  box-sizing: border-box; }\n  #gunvotes2016 * {\n    box-sizing: border-box; }\n", ""]);
+	exports.push([module.id, "#gunvotes2016 {\n  font-family: 'Open Sans', sans-serif;\n  font-weight: 300; }\n\n#gunvotes2016 {\n  font-size: 12px;\n  color: #fff;\n  text-align: center;\n  box-sizing: border-box; }\n  #gunvotes2016 * {\n    box-sizing: border-box; }\n", ""]);
 
 	// exports
 
@@ -24674,7 +24674,7 @@
 
 
 	// module
-	exports.push([module.id, ".home-page .zip-lookup-form__input {\n  border-radius: 5px;\n  padding: 17px;\n  border: 0;\n  color: #333;\n  font-weight: bold;\n  box-shadow: inset 0px 3px 8px rgba(0, 0, 0, 0.3); }\n\n.home-page__heading {\n  font-family: 'Open Sans', sans-serif;\n  font-weight: 300; }\n\n.home-page__heading {\n  font-size: 36px; }\n\n.home-page__heading {\n  margin-bottom: 50px; }\n\n.home-page .zip-lookup-form__input {\n  width: 300px; }\n", ""]);
+	exports.push([module.id, ".home-page .zip-lookup-form__input {\n  border-radius: 5px;\n  padding: 17px;\n  border: 0;\n  color: #333;\n  font-weight: bold;\n  box-shadow: inset 0px 3px 8px rgba(0, 0, 0, 0.3); }\n\n.home-page__heading {\n  font-family: 'Open Sans', sans-serif;\n  font-weight: 300; }\n\n.home-page__heading {\n  font-size: 36px; }\n\n.home-page {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-direction: column; }\n\n.home-page {\n  background: #207bca;\n  background: linear-gradient(45deg, #207bca 0%, #c03a2e 100%);\n  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#207bca', endColorstr='#c03a2e', GradientType=1 );\n  min-height: 100vh;\n  padding: 10px; }\n  .home-page__heading {\n    margin-bottom: 50px;\n    display: block; }\n  .home-page .zip-lookup-form__input {\n    width: 300px;\n    display: block; }\n", ""]);
 
 	// exports
 
@@ -25480,7 +25480,7 @@
 
 
 	// module
-	exports.push([module.id, "", ""]);
+	exports.push([module.id, ".district-page {\n  background: #edeeee;\n  background: linear-gradient(45deg, #edeeee 0%, #ffffff 100%);\n  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#edeeee', endColorstr='#ffffff', GradientType=1 );\n  min-height: 100vh; }\n", ""]);
 
 	// exports
 
