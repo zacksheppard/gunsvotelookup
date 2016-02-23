@@ -1,0 +1,24 @@
+%text-box {
+  border-radius: 5px;
+  padding: 17px;
+  border: 0;
+  color: #333;
+  font-weight: bold;
+  box-shadow: inset 0px 3px 8px rgba(0,0,0,.3);
+}
+
+%font-face {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}
+
+%heading-1 {
+  font-size: 36px;
+}
+
+%center-middle-boxes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}

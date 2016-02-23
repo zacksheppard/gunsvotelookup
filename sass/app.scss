@@ -1,11 +1,14 @@
+@import "common";
+
 #gunvotes2016 {
-  font-family: 'Open Sans', sans-serif;
-  background-color: rgb(161, 25, 49);
-  font-family: Open Sans;
+  @extend %font-face;
+
   font-size: 12px;
   color: #fff;
-  background: rgba(32,123,202,1);
-  background: linear-gradient(45deg, rgba(32,123,202,1) 0%, rgba(192,58,46,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#207bca', endColorstr='#c03a2e', GradientType=1 );
-  min-height: 100vh;
+  text-align: center;
+  box-sizing: border-box;
+
+  * {
+    box-sizing: border-box;
+  }
 }
