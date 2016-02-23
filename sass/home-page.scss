@@ -1,18 +1,27 @@
 @import "common";
 
 .home-page {
+  @extend %center-middle-boxes;
+
+  background: #207bca;
+  background: linear-gradient(45deg, #207bca 0%, #c03a2e 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#207bca', endColorstr='#c03a2e', GradientType=1 );
+  min-height: 100vh;
+  padding: 10px;
 
   &__heading {
     @extend %font-face;
     @extend %heading-1;
 
     margin-bottom: 50px;
+    display: block;
   }
 
   .zip-lookup-form__input {
     @extend %text-box;
 
     width: 300px;
+    display: block;
   }
 
 }

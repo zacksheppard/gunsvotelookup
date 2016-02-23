@@ -2,12 +2,9 @@
 
 #gunvotes2016 {
   @extend %font-face;
-  @extend %gradient-background;
-  @extend %center-middle-boxes;
 
   font-size: 12px;
   color: #fff;
-  min-height: 100vh;
   text-align: center;
   box-sizing: border-box;
 
