@@ -1,8 +1,15 @@
 .district-page {
   @extend %center-middle-boxes;
-  
+
   background: #edeeee;
   background: linear-gradient(45deg, #edeeee 0%, #ffffff 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#edeeee', endColorstr='#ffffff', GradientType=1 );
   min-height: 100vh;
+  padding: 10px;
+
+  &__heading {
+    @extend %font-face;
+    @extend %heading-1;
+    color: black;
+  }
 }

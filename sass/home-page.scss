@@ -12,9 +12,6 @@
   &__heading {
     @extend %font-face;
     @extend %heading-1;
-
-    margin-bottom: 50px;
-    display: block;
   }
 
   .zip-lookup-form__input {

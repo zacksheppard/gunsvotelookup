@@ -24674,7 +24674,7 @@
 
 
 	// module
-	exports.push([module.id, ".home-page .zip-lookup-form__input {\n  border-radius: 5px;\n  padding: 17px;\n  border: 0;\n  color: #333;\n  font-weight: bold;\n  box-shadow: inset 0px 3px 8px rgba(0, 0, 0, 0.3); }\n\n.home-page__heading {\n  font-family: 'Open Sans', sans-serif;\n  font-weight: 300; }\n\n.home-page__heading {\n  font-size: 36px; }\n\n.home-page {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-direction: column; }\n\n.home-page {\n  background: #207bca;\n  background: linear-gradient(45deg, #207bca 0%, #c03a2e 100%);\n  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#207bca', endColorstr='#c03a2e', GradientType=1 );\n  min-height: 100vh;\n  padding: 10px; }\n  .home-page__heading {\n    margin-bottom: 50px;\n    display: block; }\n  .home-page .zip-lookup-form__input {\n    width: 300px;\n    display: block; }\n", ""]);
+	exports.push([module.id, ".home-page .zip-lookup-form__input {\n  border-radius: 5px;\n  padding: 17px;\n  border: 0;\n  color: #333;\n  font-weight: bold;\n  box-shadow: inset 0px 3px 8px rgba(0, 0, 0, 0.3); }\n\n.home-page__heading {\n  font-family: 'Open Sans', sans-serif;\n  font-weight: 300; }\n\n.home-page__heading {\n  font-size: 36px;\n  margin-bottom: 50px;\n  display: block; }\n\n.home-page {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-direction: column; }\n\n.home-page {\n  background: #207bca;\n  background: linear-gradient(45deg, #207bca 0%, #c03a2e 100%);\n  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#207bca', endColorstr='#c03a2e', GradientType=1 );\n  min-height: 100vh;\n  padding: 10px; }\n  .home-page .zip-lookup-form__input {\n    width: 300px;\n    display: block; }\n", ""]);
 
 	// exports
 
@@ -25330,6 +25330,8 @@
 
 	__webpack_require__(232);
 
+	var _personCard = __webpack_require__(234);
+
 	var _xhr = __webpack_require__(220);
 
 	var _xhr2 = _interopRequireDefault(_xhr);
@@ -25378,6 +25380,7 @@
 	          });
 	        }
 
+<<<<<<< HEAD
 	        if (stateData.senators) {
 	          stateData.senators.forEach(function (sen) {
 	            senators.push(sen);
@@ -25388,6 +25391,12 @@
 	          name: stateData.name,
 	          districts: districts,
 	          senators: senators
+=======
+	        return {
+	          name: stateData.name,
+	          districts: districts,
+	          senators: stateData.senators
+>>>>>>> get data into the page and make a card compoenent
 	        };
 	      }
 	    }
@@ -25416,31 +25425,34 @@
 	      });
 	    }
 	  }, {
+	    key: 'renderPersonCards',
+	    value: function renderPersonCards() {
+	      var district = this.getDistrict(this.props.params.state, this.props.params.district);
+	      return district.senators.map(function (senator, i) {
+	        return _react2.default.createElement(_personCard.PersonCard, { person: senator, key: 'person-' + i });
+	      });
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
-	      console.log(this.getDistrict(this.props.params.state, this.props.params.district));
-	      if (this.state.congress) {
-	        return _react2.default.createElement(
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'district-page' },
+	        _react2.default.createElement(
 	          'h1',
-	          null,
+	          { className: 'district-page__heading' },
 	          'Hi District'
-	        );
-	      } else {
-	        return _react2.default.createElement(
-	          'div',
+	        ),
+	        !this.state.congress ? _react2.default.createElement(
+	          'p',
 	          null,
-	          _react2.default.createElement(
-	            'h1',
-	            null,
-	            'Hi District'
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            'Loading...'
-	          )
-	        );
-	      }
+	          'Loading...'
+	        ) : _react2.default.createElement(
+	          'section',
+	          null,
+	          this.renderPersonCards()
+	        )
+	      );
 	    }
 	  }]);
 
@@ -25482,7 +25494,109 @@
 
 
 	// module
-	exports.push([module.id, ".district-page {\n  background: #edeeee;\n  background: linear-gradient(45deg, #edeeee 0%, #ffffff 100%);\n  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#edeeee', endColorstr='#ffffff', GradientType=1 );\n  min-height: 100vh; }\n", ""]);
+	exports.push([module.id, ".district-page {\n  background: #edeeee;\n  background: linear-gradient(45deg, #edeeee 0%, #ffffff 100%);\n  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#edeeee', endColorstr='#ffffff', GradientType=1 );\n  min-height: 100vh;\n  padding: 10px; }\n  .district-page__heading {\n    color: black; }\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 234 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.PersonCard = undefined;
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(159);
+
+	var _reactRouter2 = _interopRequireDefault(_reactRouter);
+
+	__webpack_require__(235);
+
+	var _xhr = __webpack_require__(220);
+
+	var _xhr2 = _interopRequireDefault(_xhr);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var PersonCard = exports.PersonCard = function (_React$Component) {
+	  _inherits(PersonCard, _React$Component);
+
+	  function PersonCard() {
+	    _classCallCheck(this, PersonCard);
+
+	    return _possibleConstructorReturn(this, Object.getPrototypeOf(PersonCard).apply(this, arguments));
+	  }
+
+	  _createClass(PersonCard, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'article',
+	        { className: 'person-card', key: this.props.key },
+	        _react2.default.createElement(
+	          'h2',
+	          null,
+	          this.props.person.full_name
+	        )
+	      );
+	    }
+	  }]);
+
+	  return PersonCard;
+	}(_react2.default.Component);
+
+/***/ },
+/* 235 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(236);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(211)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/sass-loader/index.js!./person-card.scss", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/sass-loader/index.js!./person-card.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 236 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(210)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".person-card {\n  color: white; }\n", ""]);
 
 	// exports
 

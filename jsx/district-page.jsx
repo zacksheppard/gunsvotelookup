@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'react-router';
 import '../sass/district-page.scss';
+import {PersonCard} from './person-card.jsx';
 
 import xhr from 'xhr';
 
@@ -20,7 +21,6 @@ export class DistrictPage extends React.Component {
     let congress = this.state.congress;
     let stateData;
     let districts = {};
-    let senators = [];
 
     if (congress && congress[state]) {
 
@@ -32,16 +32,10 @@ export class DistrictPage extends React.Component {
         });
       }
 
-      if (stateData.senators) {
-        stateData.senators.forEach((sen) => {
-          senators.push(sen);
-        });
-      }
-
       return {
         name: stateData.name,
         districts: districts,
-        senators: senators
+        senators: stateData.senators
       }
     }
 
@@ -69,18 +63,26 @@ export class DistrictPage extends React.Component {
     })
   }
 
+  renderPersonCards() {
+    var district = this.getDistrict(this.props.params.state, this.props.params.district);
+    return district.senators.map((senator, i) => {
+      return (<PersonCard person={senator} key={`person-${i}`} />);
+    });
+  }
+
   render() {
-    console.log(this.getDistrict(this.props.params.state, this.props.params.district));
-    if(this.state.congress) {
-      return <h1>Hi District</h1>
-    } else {
-      return (
-        <div>
-          <h1>Hi District</h1>
+    return (
+      <div className="district-page">
+        <h1 className="district-page__heading">Hi District</h1>
+        {!this.state.congress ? (
           <p>Loading...</p>
-        </div>
-      );
-    }
+        ) : (
+          <section>
+            {this.renderPersonCards()}
+          </section>
+        )}
+      </div>
+    );
   }
 
 }
