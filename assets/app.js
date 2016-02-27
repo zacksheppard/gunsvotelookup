@@ -24565,7 +24565,7 @@
 
 
 	// module
-	exports.push([module.id, "#gunvotes2016 {\n  font-family: 'Open Sans', sans-serif;\n  font-weight: 300; }\n\n#gunvotes2016 {\n  font-size: 12px;\n  color: #fff;\n  text-align: center;\n  box-sizing: border-box; }\n  #gunvotes2016 * {\n    box-sizing: border-box; }\n", ""]);
+	exports.push([module.id, "#gunvotes2016 {\n  font-family: 'Open Sans', sans-serif;\n  font-weight: 300; }\n\n#gunvotes2016 {\n  font-size: 12px;\n  text-align: center;\n  box-sizing: border-box; }\n  #gunvotes2016 * {\n    box-sizing: border-box; }\n", ""]);
 
 	// exports
 
@@ -24576,12 +24576,12 @@
 
 	'use strict';
 
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
 	exports.HomePage = undefined;
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _react = __webpack_require__(1);
 
@@ -24674,7 +24674,7 @@
 
 
 	// module
-	exports.push([module.id, ".home-page .zip-lookup-form__input {\n  border-radius: 5px;\n  padding: 17px;\n  border: 0;\n  color: #333;\n  font-weight: bold;\n  box-shadow: inset 0px 3px 8px rgba(0, 0, 0, 0.3); }\n\n.home-page__heading {\n  font-family: 'Open Sans', sans-serif;\n  font-weight: 300; }\n\n.home-page__heading {\n  font-size: 36px;\n  margin-bottom: 50px;\n  display: block; }\n\n.home-page {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-direction: column; }\n\n.home-page {\n  background: #207bca;\n  background: linear-gradient(45deg, #207bca 0%, #c03a2e 100%);\n  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#207bca', endColorstr='#c03a2e', GradientType=1 );\n  min-height: 100vh;\n  padding: 10px; }\n  .home-page .zip-lookup-form__input {\n    width: 300px;\n    display: block; }\n", ""]);
+	exports.push([module.id, ".home-page .zip-lookup-form__input {\n  border-radius: 5px;\n  padding: 17px;\n  border: 0;\n  color: #333;\n  font-weight: bold;\n  box-shadow: inset 0px 3px 8px rgba(0, 0, 0, 0.3); }\n\n.home-page__heading {\n  font-family: 'Open Sans', sans-serif;\n  font-weight: 300; }\n\n.home-page__heading {\n  font-size: 36px;\n  margin-bottom: 50px;\n  display: block; }\n\n.home-page {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-direction: column; }\n\n.home-page {\n  background: #207bca;\n  background: linear-gradient(45deg, #207bca 0%, #c03a2e 100%);\n  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#207bca', endColorstr='#c03a2e', GradientType=1 );\n  min-height: 100vh;\n  padding: 10px;\n  color: #fff; }\n  .home-page .zip-lookup-form__input {\n    width: 300px;\n    display: block; }\n", ""]);
 
 	// exports
 
@@ -24685,12 +24685,12 @@
 
 	'use strict';
 
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
 	exports.ZipLookupForm = undefined;
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _react = __webpack_require__(1);
 
@@ -25219,12 +25219,12 @@
 
 	'use strict';
 
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
 	exports.StatePage = undefined;
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _react = __webpack_require__(1);
 
@@ -25313,12 +25313,12 @@
 
 	'use strict';
 
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
 	exports.DistrictPage = undefined;
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _react = __webpack_require__(1);
 
@@ -25368,7 +25368,6 @@
 	      var congress = this.state.congress;
 	      var stateData = undefined;
 	      var districts = {};
-	      var senators = [];
 
 	      if (congress && congress[state]) {
 
@@ -25380,23 +25379,10 @@
 	          });
 	        }
 
-<<<<<<< HEAD
-	        if (stateData.senators) {
-	          stateData.senators.forEach(function (sen) {
-	            senators.push(sen);
-	          });
-	        }
-
-	        return {
-	          name: stateData.name,
-	          districts: districts,
-	          senators: senators
-=======
 	        return {
 	          name: stateData.name,
 	          districts: districts,
 	          senators: stateData.senators
->>>>>>> get data into the page and make a card compoenent
 	        };
 	      }
 	    }
@@ -25449,7 +25435,7 @@
 	          'Loading...'
 	        ) : _react2.default.createElement(
 	          'section',
-	          null,
+	          { className: 'people' },
 	          this.renderPersonCards()
 	        )
 	      );
@@ -25494,7 +25480,7 @@
 
 
 	// module
-	exports.push([module.id, ".district-page {\n  background: #edeeee;\n  background: linear-gradient(45deg, #edeeee 0%, #ffffff 100%);\n  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#edeeee', endColorstr='#ffffff', GradientType=1 );\n  min-height: 100vh;\n  padding: 10px; }\n  .district-page__heading {\n    color: black; }\n", ""]);
+	exports.push([module.id, ".district-page {\n  background: #edeeee;\n  background: linear-gradient(45deg, #edeeee 0%, #ffffff 100%);\n  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#edeeee', endColorstr='#ffffff', GradientType=1 );\n  min-height: 100vh;\n  padding: 10px;\n  color: black; }\n  .district-page .people {\n    display: flex;\n    align-items: center;\n    justify-content: space-around; }\n  .district-page .person-card {\n    margin: 10px; }\n", ""]);
 
 	// exports
 
@@ -25551,8 +25537,8 @@
 	        { className: 'person-card', key: this.props.key },
 	        _react2.default.createElement(
 	          'h2',
-	          null,
-	          this.props.person.full_name
+	          { className: 'person-card__heading' },
+	          this.props.person.firstname + ' ' + this.props.person.lastname
 	        )
 	      );
 	    }
@@ -25596,7 +25582,7 @@
 
 
 	// module
-	exports.push([module.id, ".person-card {\n  color: white; }\n", ""]);
+	exports.push([module.id, ".person-card {\n  width: 300px;\n  height: 300px;\n  background-color: white;\n  border-radius: 5px; }\n", ""]);
 
 	// exports
 
