@@ -6,10 +6,24 @@
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#edeeee', endColorstr='#ffffff', GradientType=1 );
   min-height: 100vh;
   padding: 10px;
+  color: black;
 
   &__heading {
     @extend %font-face;
     @extend %heading-1;
-    color: black;
+  }
+
+  .people {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .person-card {
+
+    margin: 10px;
+
+    &__heading {
+    }
   }
 }

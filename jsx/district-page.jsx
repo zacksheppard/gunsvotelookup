@@ -77,7 +77,7 @@ export class DistrictPage extends React.Component {
         {!this.state.congress ? (
           <p>Loading...</p>
         ) : (
-          <section>
+          <section className="people">
             {this.renderPersonCards()}
           </section>
         )}

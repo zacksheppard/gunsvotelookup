@@ -9,7 +9,7 @@ export class PersonCard extends React.Component {
   render() {
     return (
       <article className="person-card" key={this.props.key}>
-        <h2>{this.props.person.full_name}</h2>
+        <h2 className="person-card__heading">{`${this.props.person.firstname} ${this.props.person.lastname}`}</h2>
       </article>
     )
   }
