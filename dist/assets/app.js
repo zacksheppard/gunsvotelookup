@@ -25367,21 +25367,21 @@
 
 	      var congress = this.state.congress;
 	      var stateData = undefined;
-	      var districts = {};
+	      var representitives = [];
 
 	      if (congress && congress[state]) {
 
 	        stateData = congress[state];
 
 	        if (stateData.representatives) {
-	          stateData.representatives.forEach(function (rep) {
-	            districts[rep.district] = rep;
+	          representitives = stateData.representatives.filter(function (rep) {
+	            return rep.district = district;
 	          });
 	        }
 
 	        return {
 	          name: stateData.name,
-	          districts: districts,
+	          representitives: representitives,
 	          senators: stateData.senators
 	        };
 	      }
@@ -25411,11 +25411,20 @@
 	      });
 	    }
 	  }, {
-	    key: 'renderPersonCards',
-	    value: function renderPersonCards() {
+	    key: 'renderSenatorCards',
+	    value: function renderSenatorCards() {
 	      var district = this.getDistrict(this.props.params.state, this.props.params.district);
 	      return district.senators.map(function (senator, i) {
-	        return _react2.default.createElement(_personCard.PersonCard, { person: senator, key: 'person-' + i });
+	        return _react2.default.createElement(_personCard.PersonCard, { person: senator, state: district.name, key: 'person-' + i });
+	      });
+	    }
+	  }, {
+	    key: 'renderRepCards',
+	    value: function renderRepCards() {
+	      var district = this.getDistrict(this.props.params.state, this.props.params.district);
+	      console.log(district);
+	      return district.representitives.map(function (rep, i) {
+	        return _react2.default.createElement(_personCard.PersonCard, { person: rep, state: district.name, key: 'person-' + i });
 	      });
 	    }
 	  }, {
@@ -25424,11 +25433,6 @@
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'district-page' },
-	        _react2.default.createElement(
-	          'h1',
-	          { className: 'district-page__heading' },
-	          'Hi District'
-	        ),
 	        !this.state.congress ? _react2.default.createElement(
 	          'p',
 	          null,
@@ -25436,7 +25440,8 @@
 	        ) : _react2.default.createElement(
 	          'section',
 	          { className: 'people' },
-	          this.renderPersonCards()
+	          this.renderSenatorCards(),
+	          this.renderRepCards()
 	        )
 	      );
 	    }
@@ -25480,7 +25485,7 @@
 
 
 	// module
-	exports.push([module.id, ".district-page {\n  background: #edeeee;\n  background: linear-gradient(45deg, #edeeee 0%, #ffffff 100%);\n  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#edeeee', endColorstr='#ffffff', GradientType=1 );\n  min-height: 100vh;\n  padding: 10px;\n  color: black; }\n  .district-page .people {\n    display: flex;\n    align-items: center;\n    justify-content: space-around; }\n  .district-page .person-card {\n    margin: 10px; }\n", ""]);
+	exports.push([module.id, ".district-page {\n  background: #edeeee;\n  background: linear-gradient(45deg, #edeeee 0%, #ffffff 100%);\n  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#edeeee', endColorstr='#ffffff', GradientType=1 );\n  min-height: 100vh;\n  padding: 10px;\n  color: black; }\n  .district-page .people {\n    display: flex;\n    align-items: center;\n    justify-content: space-around;\n    flex-wrap: wrap; }\n  .district-page .person-card {\n    margin: 10px; }\n", ""]);
 
 	// exports
 
@@ -25532,13 +25537,69 @@
 	  _createClass(PersonCard, [{
 	    key: 'render',
 	    value: function render() {
+	      var title = this.props.person.title_long;
 	      return _react2.default.createElement(
 	        'article',
-	        { className: 'person-card', key: this.props.key },
+	        { className: 'person-card person-card-type-' + title.toLowerCase(), key: this.props.key },
 	        _react2.default.createElement(
-	          'h2',
-	          { className: 'person-card__heading' },
-	          this.props.person.firstname + ' ' + this.props.person.lastname
+	          'header',
+	          null,
+	          _react2.default.createElement(
+	            'h2',
+	            { className: 'person-card__heading' },
+	            this.props.person.firstname + ' ' + this.props.person.lastname
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            title + ': ' + this.props.state
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'section',
+	          null,
+	          _react2.default.createElement(
+	            'article',
+	            null,
+	            _react2.default.createElement(
+	              'h3',
+	              null,
+	              'NRA Grade'
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              this.props.person.gunMetrics.nraRating2013 || 'N/A'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'article',
+	            null,
+	            _react2.default.createElement(
+	              'h3',
+	              null,
+	              'Brady Score'
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              this.props.person.gunMetrics.bradyRating2014 || 'N/A'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'article',
+	            null,
+	            _react2.default.createElement(
+	              'h3',
+	              null,
+	              'NRA Payment'
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              this.props.person.gunMetrics.nraContributions2014 || 'N/A'
+	            )
+	          )
 	        )
 	      );
 	    }
@@ -25582,7 +25643,7 @@
 
 
 	// module
-	exports.push([module.id, ".person-card {\n  width: 300px;\n  height: 300px;\n  background-color: white;\n  border-radius: 5px; }\n", ""]);
+	exports.push([module.id, ".person-card {\n  min-width: 300px;\n  max-width: 300px;\n  height: 300px;\n  background-color: white;\n  border-radius: 5px; }\n", ""]);
 
 	// exports
 

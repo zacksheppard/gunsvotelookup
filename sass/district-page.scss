@@ -8,15 +8,11 @@
   padding: 10px;
   color: black;
 
-  &__heading {
-    @extend %font-face;
-    @extend %heading-1;
-  }
-
   .people {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    flex-wrap: wrap;
   }
 
   .person-card {

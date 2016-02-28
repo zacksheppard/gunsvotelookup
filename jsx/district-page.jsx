@@ -20,21 +20,21 @@ export class DistrictPage extends React.Component {
 
     let congress = this.state.congress;
     let stateData;
-    let districts = {};
+    let representitives = [];
 
     if (congress && congress[state]) {
 
       stateData = congress[state];
 
       if (stateData.representatives) {
-        stateData.representatives.forEach((rep) => {
-          districts[rep.district] = rep;
+        representitives = stateData.representatives.filter((rep) => {
+          return rep.district = district;
         });
       }
 
       return {
         name: stateData.name,
-        districts: districts,
+        representitives: representitives,
         senators: stateData.senators
       }
     }
@@ -63,22 +63,30 @@ export class DistrictPage extends React.Component {
     })
   }
 
-  renderPersonCards() {
+  renderSenatorCards() {
     var district = this.getDistrict(this.props.params.state, this.props.params.district);
     return district.senators.map((senator, i) => {
-      return (<PersonCard person={senator} key={`person-${i}`} />);
+      return (<PersonCard person={senator} state={district.name} key={`person-${i}`} />);
+    });
+  }
+
+  renderRepCards() {
+    var district = this.getDistrict(this.props.params.state, this.props.params.district);
+    console.log(district);
+    return district.representitives.map((rep, i) => {
+      return (<PersonCard person={rep} state={district.name} key={`person-${i}`} />);
     });
   }
 
   render() {
     return (
       <div className="district-page">
-        <h1 className="district-page__heading">Hi District</h1>
         {!this.state.congress ? (
           <p>Loading...</p>
         ) : (
           <section className="people">
-            {this.renderPersonCards()}
+            {this.renderSenatorCards()}
+            {this.renderRepCards()}
           </section>
         )}
       </div>
