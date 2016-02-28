@@ -25422,7 +25422,6 @@
 	    key: 'renderRepCards',
 	    value: function renderRepCards() {
 	      var district = this.getDistrict(this.props.params.state, this.props.params.district);
-	      console.log(district);
 	      return district.representitives.map(function (rep, i) {
 	        return _react2.default.createElement(_personCard.PersonCard, { person: rep, state: district.name, key: 'person-' + i });
 	      });
@@ -25538,15 +25537,17 @@
 	    key: 'render',
 	    value: function render() {
 	      var title = this.props.person.title_long;
+	      var party = this.props.person.party;
+
 	      return _react2.default.createElement(
 	        'article',
-	        { className: 'person-card person-card-type-' + title.toLowerCase(), key: this.props.key },
+	        { className: 'person-card person-card--' + party.toLowerCase(), key: this.props.key },
 	        _react2.default.createElement(
 	          'header',
-	          null,
+	          { className: 'header' },
 	          _react2.default.createElement(
 	            'h2',
-	            { className: 'person-card__heading' },
+	            { className: 'header__heading' },
 	            this.props.person.firstname + ' ' + this.props.person.lastname
 	          ),
 	          _react2.default.createElement(
@@ -25557,49 +25558,63 @@
 	        ),
 	        _react2.default.createElement(
 	          'section',
-	          null,
+	          { className: 'gun-metrics-list' },
 	          _react2.default.createElement(
 	            'article',
-	            null,
+	            { className: 'gun-metrics-item' },
 	            _react2.default.createElement(
 	              'h3',
-	              null,
+	              { className: 'gun-metrics-item__heading' },
 	              'NRA Grade'
 	            ),
 	            _react2.default.createElement(
 	              'p',
-	              null,
+	              { className: 'gun-metrics-item__value' },
 	              this.props.person.gunMetrics.nraRating2013 || 'N/A'
 	            )
 	          ),
 	          _react2.default.createElement(
 	            'article',
-	            null,
+	            { className: 'gun-metrics-item' },
 	            _react2.default.createElement(
 	              'h3',
-	              null,
+	              { className: 'gun-metrics-item__heading' },
 	              'Brady Score'
 	            ),
 	            _react2.default.createElement(
 	              'p',
-	              null,
+	              { className: 'gun-metrics-item__value' },
 	              this.props.person.gunMetrics.bradyRating2014 || 'N/A'
 	            )
 	          ),
 	          _react2.default.createElement(
 	            'article',
-	            null,
+	            { className: 'gun-metrics-item' },
 	            _react2.default.createElement(
 	              'h3',
-	              null,
+	              { className: 'gun-metrics-item__heading' },
 	              'NRA Payment'
 	            ),
 	            _react2.default.createElement(
 	              'p',
-	              null,
+	              { className: 'gun-metrics-item__value' },
 	              this.props.person.gunMetrics.nraContributions2014 || 'N/A'
 	            )
 	          )
+	        ),
+	        _react2.default.createElement(
+	          'section',
+	          { className: 'gun-metrics-vote' },
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            '¯\\_(ツ)_/¯'
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'button',
+	          { className: 'gun-metrics-cta' },
+	          'Vote'
 	        )
 	      );
 	    }
@@ -25643,7 +25658,7 @@
 
 
 	// module
-	exports.push([module.id, ".person-card {\n  min-width: 300px;\n  max-width: 300px;\n  height: 300px;\n  background-color: white;\n  border-radius: 5px; }\n", ""]);
+	exports.push([module.id, ".person-card {\n  min-width: 300px;\n  max-width: 300px;\n  height: 422px;\n  background-color: white;\n  border-radius: 5px;\n  position: relative;\n  padding-top: 146px;\n  padding-bottom: 44px; }\n  .person-card .header {\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    display: block;\n    height: 146px;\n    border-radius: 5px 5px 0 0; }\n  .person-card .gun-metrics-list {\n    display: flex;\n    flex-direction: row; }\n  .person-card .gun-metrics-item {\n    width: 33%; }\n  .person-card .gun-metrics-vote {\n    font-weight: bolder;\n    font-size: 29px;\n    color: #b4b4b4;\n    text-shadow: 2px 2px 1px; }\n  .person-card .gun-metrics-cta {\n    position: absolute;\n    bottom: 0;\n    left: 0;\n    right: 0;\n    border-radius: 0 0 5px 5px;\n    background-color: #3fafec;\n    color: white;\n    border: none;\n    width: 100%;\n    height: 44px;\n    display: block; }\n  .person-card--republican .header {\n    background: #ed4a37;\n    background: linear-gradient(0deg, #ed4a37 0%, #cb4030 100%);\n    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ed4a37', endColorstr='#cb4030', GradientType=1 );\n    color: white; }\n  .person-card--democrat .header {\n    background: #194583;\n    background: linear-gradient(0deg, #194583 0%, #1b3052 100%);\n    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#194583', endColorstr='#1b3052', GradientType=1 );\n    color: white; }\n", ""]);
 
 	// exports
 
