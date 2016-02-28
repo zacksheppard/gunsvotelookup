@@ -8,26 +8,32 @@ export class PersonCard extends React.Component {
 
   render() {
     let title = this.props.person.title_long;
+    let party = this.props.person.party;
+
     return (
-      <article className={`person-card person-card-type-${title.toLowerCase()}`} key={this.props.key}>
-        <header>
-          <h2 className="person-card__heading">{`${this.props.person.firstname} ${this.props.person.lastname}`}</h2>
+      <article className={`person-card person-card--${party.toLowerCase()}`} key={this.props.key}>
+        <header className="header">
+          <h2 className="header__heading">{`${this.props.person.firstname} ${this.props.person.lastname}`}</h2>
           <p>{`${title}: ${this.props.state}`}</p>
         </header>
-        <section>
-          <article>
-            <h3>NRA Grade</h3>
-            <p>{this.props.person.gunMetrics.nraRating2013 || 'N/A'}</p>
+        <section className="gun-metrics-list">
+          <article className="gun-metrics-item">
+            <h3 className="gun-metrics-item__heading">NRA Grade</h3>
+            <p className="gun-metrics-item__value">{this.props.person.gunMetrics.nraRating2013 || 'N/A'}</p>
           </article>
-          <article>
-            <h3>Brady Score</h3>
-            <p>{this.props.person.gunMetrics.bradyRating2014 || 'N/A'}</p>
+          <article className="gun-metrics-item">
+            <h3 className="gun-metrics-item__heading">Brady Score</h3>
+            <p className="gun-metrics-item__value">{this.props.person.gunMetrics.bradyRating2014 || 'N/A'}</p>
           </article>
-          <article>
-            <h3>NRA Payment</h3>
-            <p>{this.props.person.gunMetrics.nraContributions2014 || 'N/A'}</p>
+          <article className="gun-metrics-item">
+            <h3 className="gun-metrics-item__heading">NRA Payment</h3>
+            <p className="gun-metrics-item__value">{this.props.person.gunMetrics.nraContributions2014 || 'N/A'}</p>
           </article>
         </section>
+        <section className="gun-metrics-vote">
+          <p>¯\_(ツ)_/¯</p>
+        </section>
+        <button className="gun-metrics-cta">Vote</button>
       </article>
     )
   }

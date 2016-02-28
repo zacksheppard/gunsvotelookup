@@ -72,7 +72,6 @@ export class DistrictPage extends React.Component {
 
   renderRepCards() {
     var district = this.getDistrict(this.props.params.state, this.props.params.district);
-    console.log(district);
     return district.representitives.map((rep, i) => {
       return (<PersonCard person={rep} state={district.name} key={`person-${i}`} />);
     });

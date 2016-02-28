@@ -1,7 +1,68 @@
 .person-card {
   min-width: 300px;
   max-width: 300px;
-  height: 300px;
+  height: 422px;
   background-color: white;
   border-radius: 5px;
+  position: relative;
+  padding-top: 146px;
+  padding-bottom: 44px;
+
+  .header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    height: 146px;
+    border-radius: 5px 5px 0 0;
+  }
+
+  .gun-metrics-list {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .gun-metrics-item {
+    width: 33%;
+  }
+
+  .gun-metrics-vote {
+    font-weight: bolder;
+    font-size: 29px;
+    color: rgb(180,180,180);
+    text-shadow: 2px 2px 1px;
+  }
+
+  .gun-metrics-cta {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 0 0 5px 5px;
+    background-color: rgb(63,175,236);
+    color: white;
+    border: none;
+    width: 100%;
+    height: 44px;
+    display: block;
+  }
+
+  &--republican {
+    .header {
+      background: #ed4a37;
+      background: linear-gradient(0deg, #ed4a37 0%, #cb4030 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ed4a37', endColorstr='#cb4030', GradientType=1 );
+      color: white;
+    }
+  }
+
+  &--democrat {
+    .header {
+      background: #194583;
+      background: linear-gradient(0deg, #194583 0%, #1b3052 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#194583', endColorstr='#1b3052', GradientType=1 );
+      color: white;
+    }
+  }
 }
