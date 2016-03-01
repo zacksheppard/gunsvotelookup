@@ -13,9 +13,15 @@ export class PersonCard extends React.Component {
     return (
       <article className={`person-card person-card--${party.toLowerCase()}`} key={this.props.key}>
         <header className="header">
+          <img className="header__image" src="assets/capital.svg" />
           <h2 className="header__heading">{`${this.props.person.firstname} ${this.props.person.lastname}`}</h2>
-          <p>{`${title}: ${this.props.state}`}</p>
+          <p className="header__title">{`${title}: ${this.props.state}`}</p>
         </header>
+        <div className="divider">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
         <section className="gun-metrics-list">
           <article className="gun-metrics-item">
             <h3 className="gun-metrics-item__heading">NRA Grade</h3>
@@ -31,7 +37,7 @@ export class PersonCard extends React.Component {
           </article>
         </section>
         <section className="gun-metrics-vote">
-          <p>¯\_(ツ)_/¯</p>
+          <p className="gun-metrics-vote__value">¯\_(ツ)_/¯</p>
         </section>
         <button className="gun-metrics-cta">Vote</button>
       </article>

@@ -16,6 +16,41 @@
     display: block;
     height: 146px;
     border-radius: 5px 5px 0 0;
+    padding: 15px;
+
+    &__image {
+      width: 70px;
+      height: 70px;
+      border-radius: 999px;
+      background-color: white;
+      margin-bottom: 5px;
+    }
+
+    &__heading {
+      font-size: 15px;
+      margin: 0 0 5px 0;
+    }
+
+    &__title {
+      margin: 0;
+      font-size: 12px;
+    }
+  }
+
+  .divider {
+    display: flex;
+    div {
+      width: 33%;
+      height: 5px;
+      border-right: solid 1px white;
+      display:inline-block;
+
+      &:last-of-type {
+        border-right: none;
+      }
+    }
+
+    margin-bottom: 10px;
   }
 
   .gun-metrics-list {
@@ -25,13 +60,39 @@
 
   .gun-metrics-item {
     width: 33%;
+    border-right: solid 1px rgb(227,228,232);
+    padding:10px 0;
+
+    &__heading {
+      margin: 0 0 5px 0;
+      font-size: 12px;
+    }
+
+    &__value {
+      font-size: 12px;
+      font-weight: bolder;
+      margin: 0;
+    }
+
+    &:last-of-type {
+      border-right: none;
+    }
   }
 
   .gun-metrics-vote {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
     font-weight: bolder;
     font-size: 29px;
     color: rgb(180,180,180);
     text-shadow: 2px 2px 1px;
+
+    &__value {
+      display: block;
+    }
   }
 
   .gun-metrics-cta {
@@ -55,6 +116,9 @@
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ed4a37', endColorstr='#cb4030', GradientType=1 );
       color: white;
     }
+    .divider {
+      background-color: #1b3052;
+    }
   }
 
   &--democrat {
@@ -63,6 +127,9 @@
       background: linear-gradient(0deg, #194583 0%, #1b3052 100%);
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#194583', endColorstr='#1b3052', GradientType=1 );
       color: white;
+    }
+    .divider {
+      background-color: #cb4030;
     }
   }
 }

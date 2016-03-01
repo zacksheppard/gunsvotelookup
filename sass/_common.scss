@@ -24,3 +24,11 @@
   justify-content: center;
   flex-direction: column;
 }
+
+%icon {
+  background-position: center center;
+}
+
+%icon-capital {
+  background-image: inline-image("assets/capital.svg");
+}

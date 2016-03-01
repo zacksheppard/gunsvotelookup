@@ -25484,7 +25484,7 @@
 
 
 	// module
-	exports.push([module.id, ".district-page {\n  background: #edeeee;\n  background: linear-gradient(45deg, #edeeee 0%, #ffffff 100%);\n  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#edeeee', endColorstr='#ffffff', GradientType=1 );\n  min-height: 100vh;\n  padding: 10px;\n  color: black; }\n  .district-page .people {\n    display: flex;\n    align-items: center;\n    justify-content: space-around;\n    flex-wrap: wrap; }\n  .district-page .person-card {\n    margin: 10px; }\n", ""]);
+	exports.push([module.id, ".district-page {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-direction: column; }\n\n.district-page {\n  background: #edeeee;\n  background: linear-gradient(45deg, #edeeee 0%, #ffffff 100%);\n  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#edeeee', endColorstr='#ffffff', GradientType=1 );\n  min-height: 100vh;\n  padding: 10px;\n  color: black; }\n  .district-page .people {\n    display: flex;\n    align-items: center;\n    justify-content: space-around;\n    flex-wrap: wrap; }\n  .district-page .person-card {\n    margin: 10px; }\n", ""]);
 
 	// exports
 
@@ -25545,6 +25545,7 @@
 	        _react2.default.createElement(
 	          'header',
 	          { className: 'header' },
+	          _react2.default.createElement('img', { className: 'header__image', src: 'assets/capital.svg' }),
 	          _react2.default.createElement(
 	            'h2',
 	            { className: 'header__heading' },
@@ -25552,9 +25553,16 @@
 	          ),
 	          _react2.default.createElement(
 	            'p',
-	            null,
+	            { className: 'header__title' },
 	            title + ': ' + this.props.state
 	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'divider' },
+	          _react2.default.createElement('div', null),
+	          _react2.default.createElement('div', null),
+	          _react2.default.createElement('div', null)
 	        ),
 	        _react2.default.createElement(
 	          'section',
@@ -25607,7 +25615,7 @@
 	          { className: 'gun-metrics-vote' },
 	          _react2.default.createElement(
 	            'p',
-	            null,
+	            { className: 'gun-metrics-vote__value' },
 	            '¯\\_(ツ)_/¯'
 	          )
 	        ),
@@ -25658,7 +25666,7 @@
 
 
 	// module
-	exports.push([module.id, ".person-card {\n  min-width: 300px;\n  max-width: 300px;\n  height: 422px;\n  background-color: white;\n  border-radius: 5px;\n  position: relative;\n  padding-top: 146px;\n  padding-bottom: 44px; }\n  .person-card .header {\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    display: block;\n    height: 146px;\n    border-radius: 5px 5px 0 0; }\n  .person-card .gun-metrics-list {\n    display: flex;\n    flex-direction: row; }\n  .person-card .gun-metrics-item {\n    width: 33%; }\n  .person-card .gun-metrics-vote {\n    font-weight: bolder;\n    font-size: 29px;\n    color: #b4b4b4;\n    text-shadow: 2px 2px 1px; }\n  .person-card .gun-metrics-cta {\n    position: absolute;\n    bottom: 0;\n    left: 0;\n    right: 0;\n    border-radius: 0 0 5px 5px;\n    background-color: #3fafec;\n    color: white;\n    border: none;\n    width: 100%;\n    height: 44px;\n    display: block; }\n  .person-card--republican .header {\n    background: #ed4a37;\n    background: linear-gradient(0deg, #ed4a37 0%, #cb4030 100%);\n    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ed4a37', endColorstr='#cb4030', GradientType=1 );\n    color: white; }\n  .person-card--democrat .header {\n    background: #194583;\n    background: linear-gradient(0deg, #194583 0%, #1b3052 100%);\n    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#194583', endColorstr='#1b3052', GradientType=1 );\n    color: white; }\n", ""]);
+	exports.push([module.id, ".person-card {\n  min-width: 300px;\n  max-width: 300px;\n  height: 422px;\n  background-color: white;\n  border-radius: 5px;\n  position: relative;\n  padding-top: 146px;\n  padding-bottom: 44px; }\n  .person-card .header {\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    display: block;\n    height: 146px;\n    border-radius: 5px 5px 0 0;\n    padding: 15px; }\n    .person-card .header__image {\n      width: 70px;\n      height: 70px;\n      border-radius: 999px;\n      background-color: white;\n      margin-bottom: 5px; }\n    .person-card .header__heading {\n      font-size: 15px;\n      margin: 0 0 5px 0; }\n    .person-card .header__title {\n      margin: 0;\n      font-size: 12px; }\n  .person-card .divider {\n    display: flex;\n    margin-bottom: 10px; }\n    .person-card .divider div {\n      width: 33%;\n      height: 5px;\n      border-right: solid 1px white;\n      display: inline-block; }\n      .person-card .divider div:last-of-type {\n        border-right: none; }\n  .person-card .gun-metrics-list {\n    display: flex;\n    flex-direction: row; }\n  .person-card .gun-metrics-item {\n    width: 33%;\n    border-right: solid 1px #e3e4e8;\n    padding: 10px 0; }\n    .person-card .gun-metrics-item__heading {\n      margin: 0 0 5px 0;\n      font-size: 12px; }\n    .person-card .gun-metrics-item__value {\n      font-size: 12px;\n      font-weight: bolder;\n      margin: 0; }\n    .person-card .gun-metrics-item:last-of-type {\n      border-right: none; }\n  .person-card .gun-metrics-vote {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    flex-direction: column;\n    font-weight: bolder;\n    font-size: 29px;\n    color: #b4b4b4;\n    text-shadow: 2px 2px 1px; }\n    .person-card .gun-metrics-vote__value {\n      display: block; }\n  .person-card .gun-metrics-cta {\n    position: absolute;\n    bottom: 0;\n    left: 0;\n    right: 0;\n    border-radius: 0 0 5px 5px;\n    background-color: #3fafec;\n    color: white;\n    border: none;\n    width: 100%;\n    height: 44px;\n    display: block; }\n  .person-card--republican .header {\n    background: #ed4a37;\n    background: linear-gradient(0deg, #ed4a37 0%, #cb4030 100%);\n    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ed4a37', endColorstr='#cb4030', GradientType=1 );\n    color: white; }\n  .person-card--republican .divider {\n    background-color: #1b3052; }\n  .person-card--democrat .header {\n    background: #194583;\n    background: linear-gradient(0deg, #194583 0%, #1b3052 100%);\n    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#194583', endColorstr='#1b3052', GradientType=1 );\n    color: white; }\n  .person-card--democrat .divider {\n    background-color: #cb4030; }\n", ""]);
 
 	// exports
 
